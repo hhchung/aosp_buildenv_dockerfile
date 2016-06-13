@@ -50,6 +50,10 @@ RUN apt-get install -y squashfs-tools genisoimage dosfstools mtools
 RUN apt-get install -y python-pip
 RUN pip install mako
 
+
+# install vim
+RUN apt-get install -y vim
+
 RUN useradd --create-home buildbot
 RUN echo "export USE_CCACHE=1" >> /etc/profile.d/android
 ENV USE_CCACHE 1
